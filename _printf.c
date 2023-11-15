@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 
 /**
  * _printf - function that produces output according to a format
@@ -9,14 +8,12 @@
 
 int _printf(const char *format, ...)
 {
-	convert p[] = {
-		{"%s", print_s}, {"%c", print_c},
-		{"%%", print_37},
-		{"%i", print_i}, {"%d", print_d}, {"%r", print_revs},
-		{"%R", print_rot13}, {"%b", print_bin},
-		{"%u", print_unsigned},
+	convert_match p[] = {
+		{"%s", print_string}, {"%c", print_char},
+		{"%%", print_37}, {"%i", print_int}, {"%d", print_dec}, {"%r", print_srev},
+		{"%R", print_rot13}, {"%b", print_bin}, {"%u", print_unsigned},
 		{"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX},
-		{"%S", print_exc_string}, {"%p", print_pointer}
+		{"%S", print_exclusive_string}, {"%p", print_pointer}
 	};
 
 	int i = 0, j, length = 0;
