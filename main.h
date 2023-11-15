@@ -1,28 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
-<<<<<<< HEAD
 
-#include <stdarg.h>
-=======
-#include <limits.h>
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
->>>>>>> b465d1e14afb66a19012f97ce7d7d8917c72b67c
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <limits.h>
-
-<<<<<<< HEAD
-typedef struct call
-{
-	char t;
-	int (*f)(char *, va_list, int);
-} call_t;
-
-=======
-
 
 /**
  * struct format - converter for printf
@@ -37,6 +19,7 @@ typedef struct format
 	int (*function)();
 } convert;
 
+int _printf(const char *format, ...);
 int *_strcpy(char *dest, char *src);
 int print_pointer(va_list val);
 int print_unsigned(va_list args);
@@ -58,7 +41,5 @@ int print_37(void);
 int print_c(va_list val);
 int print_s(va_list val);
 int _putchar(char c);
->>>>>>> b465d1e14afb66a19012f97ce7d7d8917c72b67c
-int _printf(const char *format, ...);
 
 #endif
