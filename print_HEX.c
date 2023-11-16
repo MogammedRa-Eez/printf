@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_HEX - prints an hexgecimal number.
- * @val: arguments.
+ * print_HEX - convert to hex
+ * @val: value to be converted
  * Return: counter.
  */
 int print_HEX(va_list val)
@@ -15,16 +15,17 @@ int print_HEX(va_list val)
 
 	while (num / 16 != 0)
 	{
-		num /= 16;
+		num = num / 16;
 		counter++;
 	}
 	counter++;
 	array = malloc(counter * sizeof(int));
-
+	if (array == NULL)
+		return (NULL);
 	for (i = 0; i < counter; i++)
 	{
 		array[i] = tem % 16;
-		tem /= 16;
+		tem = tem / 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{
