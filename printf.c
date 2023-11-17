@@ -3,7 +3,7 @@
 /**
  * _printf - mimics printf
  * @format: identifier look for
- * Return: integer
+ * Return: length of string
 */
 
 int _printf(const char *format, ...)

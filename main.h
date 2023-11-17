@@ -21,7 +21,7 @@ typedef struct format
 } match;
 
 
-int print_revs(va_list val);
+int print_revs(va_list args);
 int printf_char(va_list val);
 int _printf(const char *format, ...);
 int _putchar(char c);

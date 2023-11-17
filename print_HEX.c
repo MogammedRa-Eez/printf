@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_HEX - convert to hex
- * @val: value to be converted
+ * print_HEX - convert to hexadecimal
+ * @val: argument
  * Return: counter.
  */
 int print_HEX(va_list val)
