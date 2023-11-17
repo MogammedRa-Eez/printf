@@ -11,7 +11,7 @@ int print_exc_string(va_list val)
 	int i, len = 0;
 	int cast;
 
-	s = va_arg(val, char *);
+	str = va_arg(val, char *);
 	if (str == NULL)
 		str = "(null)";
 	for (i = 0; str[i] != '\0'; i++)
@@ -22,7 +22,7 @@ int print_exc_string(va_list val)
 			_putchar('x');
 			len = len + 2;
 			cast = str[i];
-			if (value < 16)
+			if (cast < 16)
 			{
 				_putchar('0');
 				len++;
