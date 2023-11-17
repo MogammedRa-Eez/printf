@@ -2,7 +2,7 @@
 
 /**
  * print_hex_extra - prints an hexgecimal number.
- * @num: arguments.
+ * @num: number to print
  * Return: counter.
  */
 int print_hex_extra(unsigned long int num)
@@ -23,7 +23,7 @@ int print_hex_extra(unsigned long int num)
 	for (i = 0; i < counter; i++)
 	{
 		array[i] = temp % 16;
-		temp = temp / 16;
+		temp /= 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{

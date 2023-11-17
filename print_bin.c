@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_bin - converts to binery
- * @val: arguement
- * Return: integer
+ * print_bin- prints binery number
+ * @val: arguements
+ * Return: 1
  */
 
 int print_bin(va_list val)

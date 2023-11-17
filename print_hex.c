@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_hex - prints hexidecimal number
+ * print_hex - prints hexadecimal number
  * @val: arguments
  * Return: counter.
  */
@@ -15,16 +15,16 @@ int print_hex(va_list val)
 
 	while (num / 16 != 0)
 	{
-		num = num / 16;
+		num /= 16;
 		counter++;
 	}
 	counter++;
-	array = malloc(sizeof(int) * counter);
+	array = malloc(counter * sizeof(int));
 
 	for (i = 0; i < counter; i++)
 	{
 		array[i] = tem % 16;
-		tem = tem / 16;
+		tem /= 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{
