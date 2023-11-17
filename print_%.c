@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_37 - prints % sign
- * Return: integer
+ * print_37 - prints char 37
+ * Return: 1
  */
 
 int print_37(void)
