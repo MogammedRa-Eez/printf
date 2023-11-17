@@ -2,31 +2,31 @@
 
 /**
  * _strlen - returns the length of a string.
- * @str: Type char pointer.
+ * @s: Type char pointer.
  * Return: c.
  */
 
-int _strlen(char *str)
+int _strlen(char *s)
 {
 	int c;
 
-	for (c = 0; str[c] != 0; c++)
+	for (c = 0; s[c] != 0; c++)
 		;
 	return (c);
 
 }
 
 /**
- * _strlenc - strlenc function but applied for constant char pointer str
- * @str: type char pointer
- * Return: c
+ * _strlenc - strlenc function but applied for constant char pointer s
+ * @s: Type char pointer 
+ * Return: c 
  */
 
-int _strlenc(const char *str)
+int _strlenc(const char *s)
 {
 	int c;
 
-	for (c = 0; str[c] != 0; c++)
+	for (c = 0; s[c] != 0; c++)
 		;
 	return (c);
 }
