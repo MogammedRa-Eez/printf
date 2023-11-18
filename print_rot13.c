@@ -2,10 +2,10 @@
 
 /**
  * print_rot13 - printf str to ROT13 place into buffer
- * @val:  type struct va_arg where is allocated printf arguments
+ * @arg:  type struct va_arg where is allocated printf arguments
  * Return: counter
  */
-int print_rot13(va_list val)
+int print_rot13(va_list args)
 {
 	int i, j, counter = 0;
 	int k = 0;
