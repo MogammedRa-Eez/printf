@@ -1,10 +1,9 @@
 #include "main.h"
-#include <stdarg.h>
 
 /**
  * print_unsigned - prints integer
  * @args: argument to print
- * Return: number of characters printed
+ * Return: integer
  */
 int print_unsigned(va_list args)
 {
