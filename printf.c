@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _printf - function that selects correct function to print
+ * _printf - mimics printf
  * @format: identifier look for
  * Return: length of string
 */
