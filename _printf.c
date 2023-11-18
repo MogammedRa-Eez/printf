@@ -1,9 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <limits.h>
 
 /**
  * _printf - function that selects correct function to print
