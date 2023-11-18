@@ -1,4 +1,9 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <limits.h>
 
 /**
  * _printf - function that selects correct function to print
@@ -23,7 +28,7 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-Here:
+
 	while (format[i] != '\0')
 	{
 		j = 13;
@@ -33,7 +38,7 @@ Here:
 			{
 				len = len + m[j].f(args);
 				i = i + 2;
-				goto Here;
+				break;
 			}
 			j--;
 		}
