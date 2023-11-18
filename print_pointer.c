@@ -9,8 +9,8 @@ int print_pointer(va_list val)
 {
 	void *p;
 	char *s = "(nil)";
-	long int a;
-	int b;
+	long int x;
+	int y;
 	int i;
 
 	p = va_arg(val, void*);
@@ -23,9 +23,9 @@ int print_pointer(va_list val)
 		return (i);
 	}
 
-	a = (unsigned long int)p;
+	x = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	b = print_hex_extra(a);
-	return (b + 2);
+	y = print_hex_extra(x);
+	return (y + 2);
 }
