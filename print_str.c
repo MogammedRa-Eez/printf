@@ -18,8 +18,8 @@ int _strlen(char *s)
 
 /**
  * _strlenc - strlenc function but applied for constant char pointer s
- * @s: Type char pointer 
- * Return: c 
+ * @s: Type char pointer
+ * Return: c
  */
 
 int _strlenc(const char *s)
