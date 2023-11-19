@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _printf - mimics printf
- * @format: input argument types for output format
+ * _printf - is a function that selects the correct function to print
+ * @format: identifier to look for
  * Return: length of the string
 */
 

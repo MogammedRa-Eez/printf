@@ -12,7 +12,7 @@ int print_exc_string(va_list val)
 	int i, len = 0;
 	int value;
 
-	s va_arg(val, char *);
+	s = va_arg(val, char *);
 	if (s == NULL)
 		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)

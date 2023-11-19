@@ -1,20 +1,18 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
 #include <limits.h>
-#include <stdio.h>
-
 
 /**
- * struct format - structure for printing various types
- * @id: type of formate to print
- * @f: function for printing
+ * struct format - match conversion specifiers for printf
+ * @id: type char pointer of the specifier
+ * @f: type pointer to function for conversion specifier
  *
  */
-
 typedef struct format
 {
 	char *id;
