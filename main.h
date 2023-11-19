@@ -4,12 +4,14 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <limits.h>
+#include <stdio.h>
 
 
 /**
- * struct format - struct fir printer functions
- * @id: identifier
- * @f: type pointer to function for the conversion specifier
+ * struct format - structure for printing various types
+ * @id: type of formate to print
+ * @f: function for printing
  *
  */
 
