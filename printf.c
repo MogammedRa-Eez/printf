@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _printf - format output conversions and print data
- * @format: input string
- * Return: number of chars printed
+ * _printf - mimics printf
+ * @format: input argument types for output format
+ * Return: length of the string
 */
 
 int _printf(const char *format, ...)
