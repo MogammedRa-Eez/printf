@@ -1,26 +1,27 @@
 #include "main.h"
 
 /**
- * print_rot13 - printf str to ROT13 place into buffer
- * @arg:  type struct va_arg where is allocated printf arguments
- * Return: counter
+ * print_rot13 - writes the str in ROT13
+ * @args: type struct va_arg where is allocated printf arguments
+ * Return: number of chars printed
  */
 int print_rot13(va_list args)
 {
-	int i, j, counter = 0;
-	int k = 0;
-	char *s = va_arg(args, char*);
+	int i, j, k;
+	int counter = 0;
+	char *str;
 	char alpha[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 	char beta[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
-	if (s == NULL)
-		s = "(null)";
-	for (i = 0; s[i]; i++)
+	str = va_arg(args, char*);
+	if (str == NULL)
+		str = "(null)";
+	for (i = 0; str[i]; i++)
 	{
 		k = 0;
 		for (j = 0; alpha[j] && !k; j++)
 		{
-			if (s[i] == alpha[j])
+			if (str[i] == alpha[j])
 			{
 				_putchar(beta[j]);
 				counter++;
@@ -29,7 +30,7 @@ int print_rot13(va_list args)
 		}
 		if (!k)
 		{
-			_putchar(s[i]);
+			_putchar(str[i]);
 			counter++;
 		}
 	}

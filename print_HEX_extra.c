@@ -3,14 +3,14 @@
 /**
  * print_HEX_extra - prints an hexgecimal number.
  * @num: number to print.
- * Return: counter.
+ * Return: counter
  */
 int print_HEX_extra(unsigned int num)
 {
 	int i;
 	int *array;
 	int counter = 0;
-	unsigned int tem = num;
+	unsigned int temp = num;
 
 	while (num / 16 != 0)
 	{
@@ -22,8 +22,8 @@ int print_HEX_extra(unsigned int num)
 
 	for (i = 0; i < counter; i++)
 	{
-		array[i] = tem % 16;
-		tem /= 16;
+		array[i] = temp % 16;
+		temp /= 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{

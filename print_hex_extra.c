@@ -2,7 +2,7 @@
 
 /**
  * print_hex_extra - prints an hexgecimal number.
- * @num: number to print
+ * @num: arguments
  * Return: counter.
  */
 int print_hex_extra(unsigned long int num)
