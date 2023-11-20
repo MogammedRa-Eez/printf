@@ -2,39 +2,44 @@
 
 /**
  * print_exc_string - print exclusive string.
- * @val: argument
- * Return: length
+ * @val: string to print
+ * Return: number of chars to be printed
  */
 
 int print_exc_string(va_list val)
 {
-	char *s;
-	int i, len = 0;
-	int value;
+	unsigned int i;
+	char *s = va_arg(val, char *);
+	int k, j = 0;
+	char c = 'A' - ':';
+	char d[2];
 
-	s = va_arg(val, char *);
 	if (s == NULL)
 		s = "(null)";
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i]; i++)
 	{
 		if (s[i] < 32 || s[i] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
-			len = len + 2;
-			value = s[i];
-			if (value < 16)
+			j += 2;
+			d[0] = s[i] / 16;
+			d[1] = s[i] % 16;
+			for (k = 0; k < 2; k++)
 			{
-				_putchar('\0');
-				len++;
+				if (d[k] >= 10)
+
+					_putchar('0' + c + d[k]);
+				else
+					_putchar('0' + d[k]);
 			}
-			len = len + print_HEX_extra(value);
+			j += k;
 		}
 		else
 		{
 			_putchar(s[i]);
-			len++;
+			j++;
 		}
 	}
-	return (len);
+	return (j);
 }
