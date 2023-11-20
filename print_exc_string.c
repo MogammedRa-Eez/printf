@@ -33,7 +33,7 @@ int print_exc_string(va_list val)
 				else
 					_putchar('0' + d[k]);
 			}
-			j += k;
+			j += print_HEX_extra(d[k]);
 		}
 		else
 		{
