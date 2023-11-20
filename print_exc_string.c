@@ -2,15 +2,14 @@
 
 /**
  * print_exc_string - print exclusive string.
- * @val: arguments
- * Return: length of the string
+ * @val: parameters
+ * Return: number of characters printed
  */
 
 int print_exc_string(va_list val)
 {
 	char *s;
 	int i, len = 0;
-	char c = 'A' - ':';
 	char value;
 
 	s = va_arg(val, char *);
@@ -26,7 +25,7 @@ int print_exc_string(va_list val)
 			value = s[i];
 			if (value < 16)
 			{
-				_putchar('0' + c + value);
+				_putchar('\0');
 				len++;
 			}
 			len = len + print_HEX_extra(value);
